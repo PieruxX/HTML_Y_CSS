@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"> <img src="./img/logo.png" alt="logo netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tv Show</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="search">
+                <button class="btnbuscar"><span class="material-icons">search</span></button>
+            </input>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="./img/tms.jpg" alt="persoanje" class="bg">
+            <span class="sombraImg"></span>
+        <div class="content">
+            <img src="./img/logoletras.png" alt="logoletras" class="movieTitle">
+            <h4>
+               <span>2023</span>
+               <span><i>16+</i></span>
+               <span>6 Temporadas</span>
+               <span>Serie</span>
+            </h4>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit cupiditate unde vel quos voluptatibus facilis, corrupti optio quod, magni, animi maxime debitis doloribus recusandae deleniti commodi ratione. Ex, delectus sunt.
+            </p>
+            <div class="buttons">
+                <a href="#">Play</a>
+                <a href="#">My List</a>
+            </div>
+        </div>
+        <a href="#" class="play" onclick="toggleVideo();"> <img src="./img/play.png" alt="play"> Watch Trailer</a>
+        </section>
+        <section class="trailer" >
+            <video src="./img/trailer.mp4" controls="true"></video>
+            <img src="./img/close.png" class="close" onclick="toggleVideo();">
+        </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video= document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
